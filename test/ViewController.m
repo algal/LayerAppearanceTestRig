@@ -49,6 +49,8 @@
   [self.view addSubview:hostView];
   self.theView = hostView;
   
+  [self updateLayerFromSwitches];
+  [self updateLabels];
 }
 
 -(void)updateLayerFromSwitches
@@ -102,18 +104,25 @@
   hostLayer.shadowPath = self.switchShadowPath.on ?
   [[UIBezierPath bezierPathWithRoundedRect:hostLayer.bounds
                               cornerRadius:CORNER_RADIUS] CGPath] :  nil;
-  
-
-
 }
 
 
 - (IBAction)switchValueChanged:(id)sender {
   [self updateLayerFromSwitches];
+  [self updateLabels];
 }
 
 - (IBAction)handleClickSetNeedsDisplay:(id)sender {
   CALayer * hostLayer = self.theView.layer;
   [hostLayer setNeedsDisplay];
+  [self updateLabels];
+}
+
+-(void)updateLabels
+{
+  self.labelViewOpaque.text = self.theView.opaque ? @"YES" : @"NO";
+  self.labelViewClipsToBounds.text = self.theView.clipsToBounds ? @"YES" : @"NO";
+  [self.labelViewOpaque setNeedsDisplay];
+  [self.labelViewClipsToBounds setNeedsDisplay];
 }
 @end

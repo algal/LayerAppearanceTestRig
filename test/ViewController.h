@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchShadowPath;
 
 - (IBAction)switchValueChanged:(id)sender;
-
 - (IBAction)handleClickSetNeedsDisplay:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelViewOpaque;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewClipsToBounds;
 @end
