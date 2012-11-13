@@ -182,14 +182,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0c-gK-pm3">
-                                <rect key="frame" x="57" y="385" width="665" height="294"/>
+                                <rect key="frame" x="20" y="434" width="665" height="294"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <mutableString key="text">This tool is for showing how a view.layer's properties affects its appearance and the view itself.  Set the view.layer's properties with switches, then call setNeedsDisplay, to observe the results. Labels showing property values update automatically.
 
 view.layer has:
 - a blue background
-- a CAShapeLayer sublayer containing an off-centered red circle
-- an (optional) mask layer that defined a small centered circle
+- a CAShapeLayer sublayer with an off-centered red circle
+- an (optional) mask layer with a small centered circle
 
 Notable:
 - layer.masksToBounds masks out any dropShadow, since it lies outside the bounds
