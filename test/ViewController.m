@@ -45,7 +45,7 @@
   [super viewDidLoad];
   self.view.backgroundColor = [UIColor lightGrayColor];
   
-  UIView * hostView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+  UIView * hostView = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
   [self.view addSubview:hostView];
   self.theView = hostView;
   
@@ -121,8 +121,9 @@
 -(void)updateLabels
 {
   self.labelViewOpaque.text = self.theView.opaque ? @"YES" : @"NO";
-  self.labelViewClipsToBounds.text = self.theView.clipsToBounds ? @"YES" : @"NO";
   [self.labelViewOpaque setNeedsDisplay];
+
+  self.labelViewClipsToBounds.text = self.theView.clipsToBounds ? @"YES" : @"NO";
   [self.labelViewClipsToBounds setNeedsDisplay];
 }
 @end
