@@ -10,4 +10,14 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchMasksToBounds;
+@property (weak, nonatomic) IBOutlet UISwitch *switchCornerRadius;
+@property (weak, nonatomic) IBOutlet UISwitch *switchMask;
+@property (weak, nonatomic) IBOutlet UISwitch *switchOpaque;
+@property (weak, nonatomic) IBOutlet UISwitch *switchShadowOpacity;
+@property (weak, nonatomic) IBOutlet UISwitch *switchShadowPath;
+
+- (IBAction)switchValueChanged:(id)sender;
+
+- (IBAction)handleClickSetNeedsDisplay:(id)sender;
 @end
