@@ -55,22 +55,12 @@
 {
   CALayer * hostLayer = self.theView.layer;
   
-  CGFloat const CORNER_RADIUS = 20.f;
-  
-  // update
-  hostLayer.masksToBounds = self.switchMasksToBounds.on;
-  hostLayer.cornerRadius = self.switchCornerRadius.on ? CORNER_RADIUS : 0.0f;
-  hostLayer.opaque = self.switchOpaque.on;
-  hostLayer.shadowRadius = 10.f;
-  hostLayer.shadowOpacity = self.switchShadowOpacity.on ? 0.5f : 0.0f;
-  hostLayer.shadowPath = self.switchShadowPath.on ?
-  [[UIBezierPath bezierPathWithRoundedRect:hostLayer.bounds
-                              cornerRadius:CORNER_RADIUS] CGPath] :  nil;
-  
+  // BUILD THE LAYER from scratch
   // configure background
   hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
   
   // purge any sublayers
+  hostLayer.mask = nil;
   [hostLayer.sublayers enumerateObjectsUsingBlock:
    ^(CALayer * sublayer, NSUInteger idx, BOOL *stop) {
      [sublayer removeFromSuperlayer];
@@ -85,6 +75,36 @@
                                                  cornerRadius:circleLayer.bounds.size.width / 2.0] CGPath];
   circleLayer.fillColor = [[UIColor redColor] CGColor];
   [hostLayer addSublayer:circleLayer];
+  
+  // add a mask sublayer
+  CAShapeLayer * ellipseLayer = [[CAShapeLayer alloc] init];
+  CGFloat insetAmount = hostLayer.bounds.size.height * 0.25f;
+  ellipseLayer.bounds = UIEdgeInsetsInsetRect(hostLayer.bounds,
+                                              UIEdgeInsetsMake(insetAmount, insetAmount, insetAmount, insetAmount));
+  ellipseLayer.position = CGPointMake(CGRectGetMidX(hostLayer.bounds), // centered
+                                      CGRectGetMidY(hostLayer.bounds));
+  ellipseLayer.path = [[UIBezierPath bezierPathWithRoundedRect:ellipseLayer.bounds
+                                                  cornerRadius:ellipseLayer.bounds.size.width / 2.0] CGPath];
+  ellipseLayer.fillColor = [[UIColor whiteColor] CGColor];
+
+  // CONFIGURE THE LAYER FROM SWITCHES
+  
+  
+  CGFloat const CORNER_RADIUS = 20.f;
+  
+  // update
+  hostLayer.masksToBounds = self.switchMasksToBounds.on;
+  hostLayer.cornerRadius = self.switchCornerRadius.on ? CORNER_RADIUS : 0.0f;
+  hostLayer.mask = self.switchMask.on ? ellipseLayer : nil;
+  hostLayer.opaque = self.switchOpaque.on;
+  hostLayer.shadowRadius = 10.f;
+  hostLayer.shadowOpacity = self.switchShadowOpacity.on ? 0.5f : 0.0f;
+  hostLayer.shadowPath = self.switchShadowPath.on ?
+  [[UIBezierPath bezierPathWithRoundedRect:hostLayer.bounds
+                              cornerRadius:CORNER_RADIUS] CGPath] :  nil;
+  
+
+
 }
 
 
