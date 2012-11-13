@@ -23,14 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E6393B9165152FE00B1E760 /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E6393B9165152FE00B1E760 /* LayerAppearanceTestRig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerAppearanceTestRig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6393BD165152FE00B1E760 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E6393BF165152FE00B1E760 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E6393C1165152FE00B1E760 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5E6393C5165152FE00B1E760 /* test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test-Info.plist"; sourceTree = "<group>"; };
+		5E6393C5165152FE00B1E760 /* LayerAppearanceTestRig-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LayerAppearanceTestRig-Info.plist"; sourceTree = "<group>"; };
 		5E6393C7165152FE00B1E760 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E6393C9165152FE00B1E760 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5E6393CB165152FE00B1E760 /* test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Prefix.pch"; sourceTree = "<group>"; };
+		5E6393CB165152FE00B1E760 /* LayerAppearanceTestRig-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LayerAppearanceTestRig-Prefix.pch"; sourceTree = "<group>"; };
 		5E6393CC165152FE00B1E760 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5E6393CD165152FE00B1E760 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5E6393CF165152FE00B1E760 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		5E6393BA165152FE00B1E760 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E6393B9165152FE00B1E760 /* test.app */,
+				5E6393B9165152FE00B1E760 /* LayerAppearanceTestRig.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,10 +103,10 @@
 		5E6393C4165152FE00B1E760 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5E6393C5165152FE00B1E760 /* test-Info.plist */,
+				5E6393C5165152FE00B1E760 /* LayerAppearanceTestRig-Info.plist */,
 				5E6393C6165152FE00B1E760 /* InfoPlist.strings */,
 				5E6393C9165152FE00B1E760 /* main.m */,
-				5E6393CB165152FE00B1E760 /* test-Prefix.pch */,
+				5E6393CB165152FE00B1E760 /* LayerAppearanceTestRig-Prefix.pch */,
 				5E6393CF165152FE00B1E760 /* Default.png */,
 				5E6393D1165152FE00B1E760 /* Default@2x.png */,
 				5E6393D3165152FE00B1E760 /* Default-568h@2x.png */,
@@ -117,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5E6393B8165152FE00B1E760 /* test */ = {
+		5E6393B8165152FE00B1E760 /* LayerAppearanceTestRig */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E6393DD165152FF00B1E760 /* Build configuration list for PBXNativeTarget "test" */;
+			buildConfigurationList = 5E6393DD165152FF00B1E760 /* Build configuration list for PBXNativeTarget "LayerAppearanceTestRig" */;
 			buildPhases = (
 				5E6393B5165152FE00B1E760 /* Sources */,
 				5E6393B6165152FE00B1E760 /* Frameworks */,
@@ -129,9 +129,9 @@
 			);
 			dependencies = (
 			);
-			name = test;
+			name = LayerAppearanceTestRig;
 			productName = test;
-			productReference = 5E6393B9165152FE00B1E760 /* test.app */;
+			productReference = 5E6393B9165152FE00B1E760 /* LayerAppearanceTestRig.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +143,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Foxtrot Studios";
 			};
-			buildConfigurationList = 5E6393B3165152FE00B1E760 /* Build configuration list for PBXProject "test" */;
+			buildConfigurationList = 5E6393B3165152FE00B1E760 /* Build configuration list for PBXProject "LayerAppearanceTestRig" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -155,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5E6393B8165152FE00B1E760 /* test */,
+				5E6393B8165152FE00B1E760 /* LayerAppearanceTestRig */,
 			);
 		};
 /* End PBXProject section */
@@ -265,9 +265,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "test/test-Prefix.pch";
-				INFOPLIST_FILE = "test/test-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "test/LayerAppearanceTestRig-Prefix.pch";
+				INFOPLIST_FILE = "test/LayerAppearanceTestRig-Info.plist";
+				PRODUCT_NAME = LayerAppearanceTestRig;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -276,9 +276,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "test/test-Prefix.pch";
-				INFOPLIST_FILE = "test/test-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "test/LayerAppearanceTestRig-Prefix.pch";
+				INFOPLIST_FILE = "test/LayerAppearanceTestRig-Info.plist";
+				PRODUCT_NAME = LayerAppearanceTestRig;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -286,7 +286,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5E6393B3165152FE00B1E760 /* Build configuration list for PBXProject "test" */ = {
+		5E6393B3165152FE00B1E760 /* Build configuration list for PBXProject "LayerAppearanceTestRig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E6393DB165152FF00B1E760 /* Debug */,
@@ -295,7 +295,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E6393DD165152FF00B1E760 /* Build configuration list for PBXNativeTarget "test" */ = {
+		5E6393DD165152FF00B1E760 /* Build configuration list for PBXNativeTarget "LayerAppearanceTestRig" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5E6393DE165152FF00B1E760 /* Debug */,
