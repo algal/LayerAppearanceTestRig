@@ -58,19 +58,19 @@
   CALayer * hostLayer = self.theView.layer;
   
   // BUILD THE LAYER from scratch
-  // configure background
-  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
-  
-  // purge any sublayers
+  // purge any masks and sublayers
   hostLayer.mask = nil;
   [hostLayer.sublayers enumerateObjectsUsingBlock:
    ^(CALayer * sublayer, NSUInteger idx, BOOL *stop) {
      [sublayer removeFromSuperlayer];
    }];
   
+  // configure background
+  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
+  
   // add a circle sublayer
   CAShapeLayer * circleLayer = [[CAShapeLayer alloc] init];
-  circleLayer.bounds = CGRectMake(0, 0, 150, 150); // bigger than container
+  circleLayer.bounds = CGRectMake(0, 0, 150, 150); 
   circleLayer.position = CGPointMake(CGRectGetMaxX(hostLayer.bounds), // centered on right
                                      CGRectGetMidY(hostLayer.bounds));
   circleLayer.path = [[UIBezierPath bezierPathWithRoundedRect:circleLayer.bounds
@@ -80,17 +80,16 @@
   
   // add a mask sublayer
   CAShapeLayer * ellipseLayer = [[CAShapeLayer alloc] init];
-  CGFloat insetAmount = hostLayer.bounds.size.height * 0.25f;
+  CGFloat insetAmount = hostLayer.bounds.size.height * 0.25f; // smaller than host
   ellipseLayer.bounds = UIEdgeInsetsInsetRect(hostLayer.bounds,
                                               UIEdgeInsetsMake(insetAmount, insetAmount, insetAmount, insetAmount));
   ellipseLayer.position = CGPointMake(CGRectGetMidX(hostLayer.bounds), // centered
                                       CGRectGetMidY(hostLayer.bounds));
   ellipseLayer.path = [[UIBezierPath bezierPathWithRoundedRect:ellipseLayer.bounds
                                                   cornerRadius:ellipseLayer.bounds.size.width / 2.0] CGPath];
-  ellipseLayer.fillColor = [[UIColor whiteColor] CGColor];
+  ellipseLayer.fillColor = [[UIColor whiteColor] CGColor]; // any color will provide non-zero alpha
 
   // CONFIGURE THE LAYER FROM SWITCHES
-  
   
   CGFloat const CORNER_RADIUS = 20.f;
   

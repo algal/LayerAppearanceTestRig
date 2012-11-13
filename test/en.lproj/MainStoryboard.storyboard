@@ -26,8 +26,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.mask != nil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7eB-Gu-mgZ">
-                                <rect key="frame" x="500" y="182" width="124" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.mask == [small circle]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7eB-Gu-mgZ">
+                                <rect key="frame" x="421" y="182" width="205" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -182,9 +182,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0c-gK-pm3">
-                                <rect key="frame" x="20" y="434" width="665" height="294"/>
+                                <rect key="frame" x="20" y="414" width="665" height="314"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">This tool is for showing how a view.layer's properties affects its appearance and the view itself.  Set the view.layer's properties with switches, then call setNeedsDisplay, to observe the results. Labels showing property values update automatically.
+                                <mutableString key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties with switches, call setNeedsDisplay, and see the results. Labels showing property values update automatically.
 
 view.layer has:
 - a blue background
@@ -192,8 +192,9 @@ view.layer has:
 - an (optional) mask layer with a small centered circle
 
 Notable:
-- layer.masksToBounds masks out any dropShadow, since it lies outside the bounds
 - layer.masksToBounds and view.clipsToBounds are equivalent
+- layer.masksToBounds masks out any dropShadow, since it lies outside the bounds
+- layer.cornerRadius masks the layer's background, even when masksToBounds=NO
 - layer.opaque and view.opaque are NOT equivalent; layer.opaque is strange
 
 </mutableString>
