@@ -19,6 +19,7 @@
 		5E6393D7165152FF00B1E760 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E6393D5165152FF00B1E760 /* MainStoryboard.storyboard */; };
 		5E6393DA165152FF00B1E760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6393D9165152FF00B1E760 /* ViewController.m */; };
 		5E6393E5165153C500B1E760 /* mandel_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6393E4165153C500B1E760 /* mandel_images.png */; };
+		5EA573BF16525AE600898292 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA573BE16525AE600898292 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		5E6393D8165152FF00B1E760 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5E6393D9165152FF00B1E760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5E6393E4165153C500B1E760 /* mandel_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandel_images.png; sourceTree = "<group>"; };
+		5EA573BE16525AE600898292 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA573BF16525AE600898292 /* QuartzCore.framework in Frameworks */,
 				5E6393BE165152FE00B1E760 /* UIKit.framework in Frameworks */,
 				5E6393C0165152FE00B1E760 /* Foundation.framework in Frameworks */,
 				5E6393C2165152FE00B1E760 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +78,7 @@
 		5E6393BC165152FE00B1E760 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5EA573BE16525AE600898292 /* QuartzCore.framework */,
 				5E6393BD165152FE00B1E760 /* UIKit.framework */,
 				5E6393BF165152FE00B1E760 /* Foundation.framework */,
 				5E6393C1165152FE00B1E760 /* CoreGraphics.framework */,
