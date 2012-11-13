@@ -61,7 +61,7 @@
 		5E6393AE165152FE00B1E760 = {
 			isa = PBXGroup;
 			children = (
-				5E6393C3165152FE00B1E760 /* test */,
+				5E6393C3165152FE00B1E760 /* LayerAppearanceTestRig */,
 				5E6393BC165152FE00B1E760 /* Frameworks */,
 				5E6393BA165152FE00B1E760 /* Products */,
 			);
@@ -86,7 +86,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E6393C3165152FE00B1E760 /* test */ = {
+		5E6393C3165152FE00B1E760 /* LayerAppearanceTestRig */ = {
 			isa = PBXGroup;
 			children = (
 				5E6393E4165153C500B1E760 /* mandel_images.png */,
@@ -97,6 +97,7 @@
 				5E6393D9165152FF00B1E760 /* ViewController.m */,
 				5E6393C4165152FE00B1E760 /* Supporting Files */,
 			);
+			name = LayerAppearanceTestRig;
 			path = test;
 			sourceTree = "<group>";
 		};

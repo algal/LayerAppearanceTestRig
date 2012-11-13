@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5E6393B8165152FE00B1E760"
-               BuildableName = "test.app"
+               BuildableName = "LayerAppearanceTestRig.app"
                BlueprintName = "LayerAppearanceTestRig"
                ReferencedContainer = "container:LayerAppearanceTestRig.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5E6393B8165152FE00B1E760"
-            BuildableName = "test.app"
+            BuildableName = "LayerAppearanceTestRig.app"
             BlueprintName = "LayerAppearanceTestRig"
             ReferencedContainer = "container:LayerAppearanceTestRig.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5E6393B8165152FE00B1E760"
-            BuildableName = "test.app"
+            BuildableName = "LayerAppearanceTestRig.app"
             BlueprintName = "LayerAppearanceTestRig"
             ReferencedContainer = "container:LayerAppearanceTestRig.xcodeproj">
          </BuildableReference>
@@ -70,7 +70,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5E6393B8165152FE00B1E760"
-            BuildableName = "test.app"
+            BuildableName = "LayerAppearanceTestRig.app"
             BlueprintName = "LayerAppearanceTestRig"
             ReferencedContainer = "container:LayerAppearanceTestRig.xcodeproj">
          </BuildableReference>
