@@ -131,5 +131,9 @@
   
   self.labelViewAlpha.text = [NSString stringWithFormat:@"%.2f",self.theView.alpha];
   [self.labelViewAlpha setNeedsDisplay];
+  
+  self.labelLayerBackground.text = [NSString stringWithFormat:@"%p",self.theView.layer.backgroundColor];
+  self.labelViewBackground.text =  [NSString stringWithFormat:@"%p",self.theView.backgroundColor.CGColor];
+  
 }
 @end

@@ -30,5 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelViewClipsToBounds;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewOpaque;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewAlpha;
+@property (weak, nonatomic) IBOutlet UILabel *labelLayerBackground;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewBackground;
 
 @end
