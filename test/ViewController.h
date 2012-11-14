@@ -10,16 +10,25 @@
 
 @interface ViewController : UIViewController
 
+// layer controls
+
 @property (weak, nonatomic) IBOutlet UISwitch *switchMasksToBounds;
 @property (weak, nonatomic) IBOutlet UISwitch *switchCornerRadius;
 @property (weak, nonatomic) IBOutlet UISwitch *switchMask;
 @property (weak, nonatomic) IBOutlet UISwitch *switchOpaque;
 @property (weak, nonatomic) IBOutlet UISwitch *switchShadowOpacity;
 @property (weak, nonatomic) IBOutlet UISwitch *switchShadowPath;
+@property (weak, nonatomic) IBOutlet UISlider *sliderLayerOpacity;
+
+// handelers
 
 - (IBAction)switchValueChanged:(id)sender;
 - (IBAction)handleClickSetNeedsDisplay:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *labelViewOpaque;
+// labels
+
 @property (weak, nonatomic) IBOutlet UILabel *labelViewClipsToBounds;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewOpaque;
+@property (weak, nonatomic) IBOutlet UILabel *labelViewAlpha;
+
 @end

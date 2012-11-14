@@ -17,27 +17,25 @@
 
 - (UIView *)roundedImage
 {
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    UIImage *image = [UIImage imageNamed:@"mandel_images.png"];
-    
-    CGRect imgFrame = CGRectMake(100, 100, 100, 100);
-    UIView *imgView = [[UIView alloc] initWithFrame:imgFrame];
-    imgView.backgroundColor = [UIColor colorWithPatternImage:image];
-    
-    // Rounded corners.
-    imgView.layer.cornerRadius = 10;
-    
-    // A thin border.
-    imgView.layer.borderColor = [UIColor blackColor].CGColor;
-    imgView.layer.borderWidth = 0.3;
-    
-    // Drop shadow.
-    imgView.layer.shadowColor = [UIColor blackColor].CGColor;
-    imgView.layer.shadowOpacity = 1.0;
-    imgView.layer.shadowRadius = 7.0;
-    imgView.layer.shadowOffset = CGSizeMake(0, 4);
-    return imgView;
+  UIImage *image = [UIImage imageNamed:@"mandel_images.png"];
+  
+  CGRect imgFrame = CGRectMake(100, 100, 100, 100);
+  UIView *imgView = [[UIView alloc] initWithFrame:imgFrame];
+  imgView.backgroundColor = [UIColor colorWithPatternImage:image];
+  
+  // Rounded corners.
+  imgView.layer.cornerRadius = 10;
+  
+  // A thin border.
+  imgView.layer.borderColor = [UIColor blackColor].CGColor;
+  imgView.layer.borderWidth = 0.3;
+  
+  // Drop shadow.
+  imgView.layer.shadowColor = [UIColor blackColor].CGColor;
+  imgView.layer.shadowOpacity = 1.0;
+  imgView.layer.shadowRadius = 7.0;
+  imgView.layer.shadowOffset = CGSizeMake(0, 4);
+  return imgView;
 }
 
 - (void)viewDidLoad
@@ -56,8 +54,11 @@
 -(void)updateLayerFromSwitches
 {
   CALayer * hostLayer = self.theView.layer;
-  
+
+  //
   // BUILD THE LAYER from scratch
+  //
+  
   // purge any masks and sublayers
   hostLayer.mask = nil;
   [hostLayer.sublayers enumerateObjectsUsingBlock:
@@ -66,12 +67,12 @@
    }];
   
   // configure background
-//  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
+  //  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
   hostLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mandel200x200.jpg"]].CGColor;
   
   // add a circle sublayer
   CAShapeLayer * circleLayer = [[CAShapeLayer alloc] init];
-  circleLayer.bounds = CGRectMake(0, 0, 150, 150); 
+  circleLayer.bounds = CGRectMake(0, 0, 150, 150);
   circleLayer.position = CGPointMake(CGRectGetMaxX(hostLayer.bounds), // centered on right
                                      CGRectGetMidY(hostLayer.bounds));
   circleLayer.path = [[UIBezierPath bezierPathWithRoundedRect:circleLayer.bounds
@@ -89,12 +90,15 @@
   ellipseLayer.path = [[UIBezierPath bezierPathWithRoundedRect:ellipseLayer.bounds
                                                   cornerRadius:ellipseLayer.bounds.size.width / 2.0] CGPath];
   ellipseLayer.fillColor = [[UIColor whiteColor] CGColor]; // any color will provide non-zero alpha
-
+  
+  //
   // CONFIGURE THE LAYER FROM SWITCHES
+  //
   
   CGFloat const CORNER_RADIUS = 20.f;
-  
-  // update
+  hostLayer.opacity = self.sliderLayerOpacity.value;
+  NSLog(@"hostLayer.opacity=%f",hostLayer.opacity);
+  NSLog(@"view.alpha=%f",self.theView.alpha);
   hostLayer.masksToBounds = self.switchMasksToBounds.on;
   hostLayer.cornerRadius = self.switchCornerRadius.on ? CORNER_RADIUS : 0.0f;
   hostLayer.mask = self.switchMask.on ? ellipseLayer : nil;
@@ -105,7 +109,6 @@
   [[UIBezierPath bezierPathWithRoundedRect:hostLayer.bounds
                               cornerRadius:CORNER_RADIUS] CGPath] :  nil;
 }
-
 
 - (IBAction)switchValueChanged:(id)sender {
   [self updateLayerFromSwitches];
@@ -122,8 +125,11 @@
 {
   self.labelViewOpaque.text = self.theView.opaque ? @"YES" : @"NO";
   [self.labelViewOpaque setNeedsDisplay];
-
+  
   self.labelViewClipsToBounds.text = self.theView.clipsToBounds ? @"YES" : @"NO";
   [self.labelViewClipsToBounds setNeedsDisplay];
+  
+  self.labelViewAlpha.text = [NSString stringWithFormat:@"%.2f",self.theView.alpha];
+  [self.labelViewAlpha setNeedsDisplay];
 }
 @end
