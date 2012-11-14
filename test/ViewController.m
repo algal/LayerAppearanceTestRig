@@ -47,11 +47,11 @@
   [self.view addSubview:hostView];
   self.theView = hostView;
   
-  [self updateLayerFromSwitches];
+  [self updateLayerFromControls];
   [self updateLabels];
 }
 
--(void)updateLayerFromSwitches
+-(void)updateLayerFromControls
 {
   CALayer * hostLayer = self.theView.layer;
 
@@ -111,7 +111,7 @@
 }
 
 - (IBAction)switchValueChanged:(id)sender {
-  [self updateLayerFromSwitches];
+  [self updateLayerFromControls];
   [self updateLabels];
 }
 
