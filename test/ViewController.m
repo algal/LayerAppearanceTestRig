@@ -66,7 +66,8 @@
    }];
   
   // configure background
-  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
+//  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
+  hostLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mandel200x200.jpg"]].CGColor;
   
   // add a circle sublayer
   CAShapeLayer * circleLayer = [[CAShapeLayer alloc] init];

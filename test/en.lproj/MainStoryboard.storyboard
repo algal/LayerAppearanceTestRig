@@ -182,12 +182,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0c-gK-pm3">
-                                <rect key="frame" x="20" y="414" width="665" height="314"/>
+                                <rect key="frame" x="20" y="414" width="665" height="315"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <mutableString key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties with switches, call setNeedsDisplay, and see the results. Labels showing property values update automatically.
 
 view.layer has:
-- a blue background
+- a background "color" image defined with +[UIColor colorWithImagePattern:]
 - a CAShapeLayer sublayer with an off-centered red circle
 - an (optional) mask layer with a small centered circle
 

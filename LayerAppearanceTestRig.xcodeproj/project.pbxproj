@@ -20,6 +20,7 @@
 		5E6393DA165152FF00B1E760 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6393D9165152FF00B1E760 /* ViewController.m */; };
 		5E6393E5165153C500B1E760 /* mandel_images.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E6393E4165153C500B1E760 /* mandel_images.png */; };
 		5EA573BF16525AE600898292 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA573BE16525AE600898292 /* QuartzCore.framework */; };
+		5EA573E31652921400898292 /* mandel200x200.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA573E21652921400898292 /* mandel200x200.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5E6393D9165152FF00B1E760 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5E6393E4165153C500B1E760 /* mandel_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandel_images.png; sourceTree = "<group>"; };
 		5EA573BE16525AE600898292 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5EA573E21652921400898292 /* mandel200x200.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mandel200x200.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		5E6393C3165152FE00B1E760 /* LayerAppearanceTestRig */ = {
 			isa = PBXGroup;
 			children = (
+				5EA573E21652921400898292 /* mandel200x200.jpg */,
 				5E6393E4165153C500B1E760 /* mandel_images.png */,
 				5E6393CC165152FE00B1E760 /* AppDelegate.h */,
 				5E6393CD165152FE00B1E760 /* AppDelegate.m */,
@@ -172,6 +175,7 @@
 				5E6393D4165152FF00B1E760 /* Default-568h@2x.png in Resources */,
 				5E6393D7165152FF00B1E760 /* MainStoryboard.storyboard in Resources */,
 				5E6393E5165153C500B1E760 /* mandel_images.png in Resources */,
+				5EA573E31652921400898292 /* mandel200x200.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
