@@ -97,7 +97,7 @@
                                 </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="spX-9E-XEW">
-                                <rect key="frame" x="753" y="617" width="194" height="44"/>
+                                <rect key="frame" x="810" y="685" width="194" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="[layer setNeedsDisplay]">
@@ -182,24 +182,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0c-gK-pm3">
-                                <rect key="frame" x="20" y="394" width="665" height="336"/>
+                                <rect key="frame" x="20" y="387" width="784" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels showing property values update automatically.
+                                <mutableString key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels values update automatically.
 
 view.layer has:
 - a background "color" image defined with +[UIColor colorWithImagePattern:]
-- a CAShapeLayer sublayer with an off-centered red circle
+- a CAShapeLayer sublayer with red circle centred on the bottom-right
 - an (optional) mask layer with a small centered circle
 
 Notable:
 - layer.cornerRadius masks the layer's background (even when masksToBounds=NO)
-- layer.masksToBounds masks out any drop shadow, since it lies outside the bounds
+- layer.cornerRadius also masks the layer's contents (when masksToBounds=YES)
+- layer.masksToBounds=YES masks out any drop shadows, since they lie outside the bounds
 - layer.masksToBounds and view.clipsToBounds are equivalent
 - layer.opacity and view.alpha are equivalent
 - layer.backgroundColor and view.backgroundColor are equivalent
 - layer.opaque and view.opaque are NOT equivalent; layer.opaque is strange
 </mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

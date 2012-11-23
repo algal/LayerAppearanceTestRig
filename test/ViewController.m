@@ -59,22 +59,59 @@
   // BUILD THE LAYER from scratch
   //
   
-  // purge any masks and sublayers
+  // purge any masks, sublayers, transforms
   hostLayer.mask = nil;
   [hostLayer.sublayers enumerateObjectsUsingBlock:
    ^(CALayer * sublayer, NSUInteger idx, BOOL *stop) {
      [sublayer removeFromSuperlayer];
    }];
+  NSLog(@"CGAffineTransformIdentity=%@",NSStringFromCGAffineTransform(CGAffineTransformIdentity));
+  NSLog(@"hostLayer.transform=%@",NSStringFromCGAffineTransform(CATransform3DGetAffineTransform(hostLayer.transform)));
+  NSLog(@"hostLayer.sublayerTransform=%@",NSStringFromCGAffineTransform(CATransform3DGetAffineTransform(hostLayer.sublayerTransform)));
+  NSLog(@"hostLayer.contentsAreFlipped=%@",(hostLayer.contentsAreFlipped ? @"YES" : @"NO"));
+  hostLayer.transform = CATransform3DIdentity;
+  hostLayer.sublayerTransform = CATransform3DIdentity;
   
-  // configure background
-  //  hostLayer.backgroundColor = [[UIColor blueColor] CGColor];
-  hostLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mandel200x200.jpg"]].CGColor;
+  // assign image to backgroundColor
+   hostLayer.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mandel200x200.jpg"]].CGColor;
+  /*
+   This transform ensures that the image provided as a background color appears correctly oriented;
+   otherwise, it appears flipped along the y-axis.
+   
+   Why? Not 100% sure. CoreGraphics normally use a flipped coordinate system but UIKit normally
+   compensates for this so you don't notice. However, this compensation seems to apply to a 
+   CALayer's contents (i.e., foreground), not to its background, so we need to add this transform 
+   explicitly to ensure that images added via the backgroundColor are oriented correctly.
+   
+   In what sense does iOS normally compensate for the reversed coordinates. For instance, if you 
+   assign an image to the _contents_ of the layer with the statement
+     hostLayer.contents = (id) [UIImage imageNamed:@"mandel200x200.jpg"] CGImage];
+   then the image appears with the correct orientation.
+   
+   So why  not do that? If you assign the image to the contents of the layer, then it only receives 
+   the corner-clipping produced by the cornerRadius property if you ALSO turn on masksToBounds, and 
+   if you turn on masksToBounds then you also clip out any drop shadow produced by shadowOpacity. 
+   So if you want rounded corners AND a drop shadow AND you want to do it all with one layer, then
+   you need to put the image in the background.
+   
+   Alternatively, you can produce the same visual effect by using multiple layers: a bottom layer
+   with masksToBounds=NO which produces the drop shadow (with contours implicitly defined from a 
+   .cornerRadius or else explicitly defined with .shadowPath), and then a sublayer layer on top 
+   with masksToBounds=YES and the image in its .contents and then a cornerRadius (or even
+   a .mask) defining that defines identical clipping of the corners.
+   */
+  hostLayer.transform = CATransform3DMakeScale(1.0f, -1.0f, 1.0f);
+  /*
+   This .sublayerTransform ensures that the transform above, which we introduced to correct the
+   orientation of images in the backGroundcolor, does not apply to sublayers as well.
+   */
+  hostLayer.sublayerTransform = CATransform3DMakeScale(1.0f, -1.0f, 1.0f);
   
   // add a circle sublayer
   CAShapeLayer * circleLayer = [[CAShapeLayer alloc] init];
   circleLayer.bounds = CGRectMake(0, 0, 150, 150);
-  circleLayer.position = CGPointMake(CGRectGetMaxX(hostLayer.bounds), // centered on right
-                                     CGRectGetMidY(hostLayer.bounds));
+  circleLayer.position = CGPointMake(CGRectGetMaxX(hostLayer.bounds), // centered on bottom-right
+                                     CGRectGetMaxY(hostLayer.bounds));
   circleLayer.path = [[UIBezierPath bezierPathWithRoundedRect:circleLayer.bounds
                                                  cornerRadius:circleLayer.bounds.size.width / 2.0] CGPath];
   circleLayer.fillColor = [[UIColor redColor] CGColor];
