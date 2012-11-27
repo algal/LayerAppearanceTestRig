@@ -19,7 +19,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.cornerRadius == 20.f" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JtX-3c-Wx1">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.cornerRadius" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JtX-3c-Wx1">
                                 <rect key="frame" x="373" y="147" width="201" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -40,8 +40,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.shadowOpacity == 0.5f" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZJ-Cl-XYP">
-                                <rect key="frame" x="360" y="252" width="216" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.shadowOpacity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZJ-Cl-XYP">
+                                <rect key="frame" x="414" y="252" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -59,13 +59,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="D25-72-9tg"/>
-                                </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="xLO-Aa-uCP">
-                                <rect key="frame" x="596" y="144" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="ylb-Ic-ZdQ"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ZzP-O4-CHO">
@@ -267,6 +260,20 @@ Notable:
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IIv-mf-BDC">
+                                <rect key="frame" x="745" y="147" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="40" id="k8a-F8-vic">
+                                <rect key="frame" x="594" y="147" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Dmw-dy-Zdl"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -274,14 +281,15 @@ Notable:
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="labelLayerBackground" destination="Q5V-Zy-7QU" id="yx8-CH-ais"/>
+                        <outlet property="labelLayerCornerRadius" destination="IIv-mf-BDC" id="gIx-E6-jtU"/>
                         <outlet property="labelLayerShadowOpacity" destination="Rml-Yo-dA2" id="ZOu-TQ-l7s"/>
                         <outlet property="labelViewAlpha" destination="A9E-CY-E3x" id="bL9-ou-KXJ"/>
                         <outlet property="labelViewBackground" destination="0Ft-Q6-Lyh" id="lQ0-k4-vJY"/>
                         <outlet property="labelViewClipsToBounds" destination="AQV-Um-tIN" id="OXN-fA-uPF"/>
                         <outlet property="labelViewOpaque" destination="dYU-e1-t0a" id="X0K-2r-U1q"/>
+                        <outlet property="sliderCornerRadius" destination="k8a-F8-vic" id="8S1-Vn-bah"/>
                         <outlet property="sliderLayerOpacity" destination="eqb-8t-FNS" id="Sre-dR-RX4"/>
                         <outlet property="sliderShadowOpacity" destination="QxE-EV-HEC" id="aVQ-d7-s0P"/>
-                        <outlet property="switchCornerRadius" destination="xLO-Aa-uCP" id="ny9-OM-r43"/>
                         <outlet property="switchMask" destination="ZzP-O4-CHO" id="MD7-Zl-fMZ"/>
                         <outlet property="switchMasksToBounds" destination="Ze6-xc-xLg" id="iz8-bZ-VhU"/>
                         <outlet property="switchOpaque" destination="GxE-7n-FAY" id="5SE-mK-C6Y"/>
@@ -299,14 +307,15 @@ Notable:
                 <relationship kind="action" name="handleClickSetNeedsDisplay:"/>
                 <relationship kind="action" name="switchValueChanged:"/>
                 <relationship kind="outlet" name="labelLayerBackground" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLayerCornerRadius" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLayerShadowOpacity" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewAlpha" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewBackground" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewClipsToBounds" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewOpaque" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sliderCornerRadius" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="sliderLayerOpacity" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="sliderShadowOpacity" candidateClass="UISlider"/>
-                <relationship kind="outlet" name="switchCornerRadius" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchMask" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchMasksToBounds" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchOpaque" candidateClass="UISwitch"/>

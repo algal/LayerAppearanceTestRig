@@ -132,12 +132,12 @@
   // CONFIGURE THE LAYER FROM THE CONTROLS
   //
   
-  CGFloat const CORNER_RADIUS = 20.f;
+  CGFloat const CORNER_RADIUS = self.sliderCornerRadius.value;
   hostLayer.opacity = self.sliderLayerOpacity.value;
   NSLog(@"hostLayer.opacity=%f",hostLayer.opacity);
   NSLog(@"view.alpha=%f",self.theView.alpha);
   hostLayer.masksToBounds = self.switchMasksToBounds.on;
-  hostLayer.cornerRadius = self.switchCornerRadius.on ? CORNER_RADIUS : 0.0f;
+  hostLayer.cornerRadius =  CORNER_RADIUS;
   hostLayer.mask = self.switchMask.on ? ellipseLayer : nil;
   hostLayer.opaque = self.switchOpaque.on;
   hostLayer.shadowRadius = 10.f;
@@ -173,6 +173,6 @@
   
   self.labelLayerBackground.text = [NSString stringWithFormat:@"%p",self.theView.layer.backgroundColor];
   self.labelViewBackground.text =  [NSString stringWithFormat:@"%p",self.theView.backgroundColor.CGColor];
-  
+  self.labelLayerCornerRadius.text = [NSString stringWithFormat:@"%.1f",self.theView.layer.cornerRadius];
 }
 @end
