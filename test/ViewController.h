@@ -16,7 +16,10 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchCornerRadius;
 @property (weak, nonatomic) IBOutlet UISwitch *switchMask;
 @property (weak, nonatomic) IBOutlet UISwitch *switchOpaque;
-@property (weak, nonatomic) IBOutlet UISwitch *switchShadowOpacity;
+
+
+@property (weak, nonatomic) IBOutlet UISlider *sliderShadowOpacity;
+
 @property (weak, nonatomic) IBOutlet UISwitch *switchShadowPath;
 @property (weak, nonatomic) IBOutlet UISlider *sliderLayerOpacity;
 
@@ -32,5 +35,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelViewAlpha;
 @property (weak, nonatomic) IBOutlet UILabel *labelLayerBackground;
 @property (weak, nonatomic) IBOutlet UILabel *labelViewBackground;
+@property (weak, nonatomic) IBOutlet UILabel *labelLayerShadowOpacity;
 
 @end

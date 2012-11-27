@@ -41,9 +41,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor lightGrayColor];
+  self.view.backgroundColor = [UIColor whiteColor];
   
-  UIView * hostView = [[UIView alloc] initWithFrame:CGRectMake(50, 50, 200, 200)];
+  UIView * hostView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
   [self.view addSubview:hostView];
   self.theView = hostView;
   
@@ -129,7 +129,7 @@
   ellipseLayer.fillColor = [[UIColor whiteColor] CGColor]; // any color will provide non-zero alpha
   
   //
-  // CONFIGURE THE LAYER FROM SWITCHES
+  // CONFIGURE THE LAYER FROM THE CONTROLS
   //
   
   CGFloat const CORNER_RADIUS = 20.f;
@@ -141,7 +141,7 @@
   hostLayer.mask = self.switchMask.on ? ellipseLayer : nil;
   hostLayer.opaque = self.switchOpaque.on;
   hostLayer.shadowRadius = 10.f;
-  hostLayer.shadowOpacity = self.switchShadowOpacity.on ? 0.5f : 0.0f;
+  hostLayer.shadowOpacity = self.sliderShadowOpacity.value;
   hostLayer.shadowPath = self.switchShadowPath.on ?
   [[UIBezierPath bezierPathWithRoundedRect:hostLayer.bounds
                               cornerRadius:CORNER_RADIUS] CGPath] :  nil;
@@ -168,6 +168,8 @@
   
   self.labelViewAlpha.text = [NSString stringWithFormat:@"%.2f",self.theView.alpha];
   [self.labelViewAlpha setNeedsDisplay];
+  
+  self.labelLayerShadowOpacity.text = [NSString stringWithFormat:@"%.2f",self.theView.layer.shadowOpacity];
   
   self.labelLayerBackground.text = [NSString stringWithFormat:@"%p",self.theView.layer.backgroundColor];
   self.labelViewBackground.text =  [NSString stringWithFormat:@"%p",self.theView.backgroundColor.CGColor];

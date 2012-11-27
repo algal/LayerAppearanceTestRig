@@ -82,13 +82,6 @@
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Ool-4C-y2E"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="9UF-0I-9sO">
-                                <rect key="frame" x="596" y="249" width="79" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="U0H-XS-rfu"/>
-                                </connections>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Q5e-bX-wbl">
                                 <rect key="frame" x="596" y="284" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -184,7 +177,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0c-gK-pm3">
                                 <rect key="frame" x="20" y="387" width="784" height="378"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels values update automatically.
+                                <string key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels values update automatically.
 
 view.layer has:
 - a background "color" image defined with +[UIColor colorWithImagePattern:]
@@ -199,7 +192,7 @@ Notable:
 - layer.opacity and view.alpha are equivalent
 - layer.backgroundColor and view.backgroundColor are equivalent
 - layer.opaque and view.opaque are NOT equivalent; layer.opaque is strange
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -260,6 +253,20 @@ Notable:
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="QxE-EV-HEC">
+                                <rect key="frame" x="594" y="251" width="118" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Phh-hm-nHo"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rml-Yo-dA2">
+                                <rect key="frame" x="745" y="252" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -267,16 +274,17 @@ Notable:
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="labelLayerBackground" destination="Q5V-Zy-7QU" id="yx8-CH-ais"/>
+                        <outlet property="labelLayerShadowOpacity" destination="Rml-Yo-dA2" id="ZOu-TQ-l7s"/>
                         <outlet property="labelViewAlpha" destination="A9E-CY-E3x" id="bL9-ou-KXJ"/>
                         <outlet property="labelViewBackground" destination="0Ft-Q6-Lyh" id="lQ0-k4-vJY"/>
                         <outlet property="labelViewClipsToBounds" destination="AQV-Um-tIN" id="OXN-fA-uPF"/>
                         <outlet property="labelViewOpaque" destination="dYU-e1-t0a" id="X0K-2r-U1q"/>
                         <outlet property="sliderLayerOpacity" destination="eqb-8t-FNS" id="Sre-dR-RX4"/>
+                        <outlet property="sliderShadowOpacity" destination="QxE-EV-HEC" id="aVQ-d7-s0P"/>
                         <outlet property="switchCornerRadius" destination="xLO-Aa-uCP" id="ny9-OM-r43"/>
                         <outlet property="switchMask" destination="ZzP-O4-CHO" id="MD7-Zl-fMZ"/>
                         <outlet property="switchMasksToBounds" destination="Ze6-xc-xLg" id="iz8-bZ-VhU"/>
                         <outlet property="switchOpaque" destination="GxE-7n-FAY" id="5SE-mK-C6Y"/>
-                        <outlet property="switchShadowOpacity" destination="9UF-0I-9sO" id="mqE-zS-zhA"/>
                         <outlet property="switchShadowPath" destination="Q5e-bX-wbl" id="2XE-l3-nVt"/>
                     </connections>
                 </viewController>
@@ -291,16 +299,17 @@ Notable:
                 <relationship kind="action" name="handleClickSetNeedsDisplay:"/>
                 <relationship kind="action" name="switchValueChanged:"/>
                 <relationship kind="outlet" name="labelLayerBackground" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelLayerShadowOpacity" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewAlpha" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewBackground" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewClipsToBounds" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelViewOpaque" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="sliderLayerOpacity" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="sliderShadowOpacity" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="switchCornerRadius" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchMask" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchMasksToBounds" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchOpaque" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="switchShadowOpacity" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchShadowPath" candidateClass="UISwitch"/>
             </relationships>
         </class>
