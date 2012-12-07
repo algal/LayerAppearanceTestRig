@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E475AD5167295BC008C3699 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5E475AD4167295BC008C3699 /* README.md */; };
 		5E6393BE165152FE00B1E760 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6393BD165152FE00B1E760 /* UIKit.framework */; };
 		5E6393C0165152FE00B1E760 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6393BF165152FE00B1E760 /* Foundation.framework */; };
 		5E6393C2165152FE00B1E760 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6393C1165152FE00B1E760 /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E475AD4167295BC008C3699 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		5E6393B9165152FE00B1E760 /* LayerAppearanceTestRig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerAppearanceTestRig.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E6393BD165152FE00B1E760 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E6393BF165152FE00B1E760 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,6 +65,7 @@
 		5E6393AE165152FE00B1E760 = {
 			isa = PBXGroup;
 			children = (
+				5E475AD4167295BC008C3699 /* README.md */,
 				5E6393C3165152FE00B1E760 /* LayerAppearanceTestRig */,
 				5E6393BC165152FE00B1E760 /* Frameworks */,
 				5E6393BA165152FE00B1E760 /* Products */,
@@ -176,6 +179,7 @@
 				5E6393D7165152FF00B1E760 /* MainStoryboard.storyboard in Resources */,
 				5E6393E5165153C500B1E760 /* mandel_images.png in Resources */,
 				5EA573E31652921400898292 /* mandel200x200.jpg in Resources */,
+				5E475AD5167295BC008C3699 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

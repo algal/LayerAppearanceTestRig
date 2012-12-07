@@ -258,30 +258,14 @@
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Dmw-dy-Zdl"/>
                                 </connections>
                             </slider>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="ukT-yc-2qk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="&lt;README.md file contents will be assigned here>" id="ukT-yc-2qk">
                                 <rect key="frame" x="10" y="561" width="784" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels values update automatically.
-
-view.layer has:
-- a background "color" image defined with +[UIColor colorWithImagePattern:]
-- a CAShapeLayer sublayer with red circle centred on the bottom-right
-- an (optional) mask layer with a small centered circle
-
-Notable:
-- layer.cornerRadius masks the layer's background (even when masksToBounds=NO)
-- layer.cornerRadius also masks the layer's contents (when masksToBounds=YES)
-- layer.masksToBounds=YES masks out any drop shadows, since they lie outside the bounds
-- layer.masksToBounds and view.clipsToBounds are equivalent
-- layer.opacity and view.alpha are equivalent
-- layer.backgroundColor and view.backgroundColor are equivalent
-- layer.opaque and view.opaque are NOT equivalent; layer.opaque is strange
-</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="1xA-10-bVW">
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="1xA-10-bVW">
                                 <rect key="frame" x="606" y="356" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -316,6 +300,7 @@ Notable:
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
+                        <outlet property="labelDocumentation" destination="ukT-yc-2qk" id="mfb-Gw-IPy"/>
                         <outlet property="labelLayerBackground" destination="Q5V-Zy-7QU" id="yx8-CH-ais"/>
                         <outlet property="labelLayerCornerRadius" destination="IIv-mf-BDC" id="gIx-E6-jtU"/>
                         <outlet property="labelLayerShadowOpacity" destination="Rml-Yo-dA2" id="ZOu-TQ-l7s"/>
@@ -345,6 +330,7 @@ Notable:
                 <relationship kind="action" name="handleClickAnimatePosition:"/>
                 <relationship kind="action" name="handleClickSetNeedsDisplay:"/>
                 <relationship kind="action" name="switchValueChanged:"/>
+                <relationship kind="outlet" name="labelDocumentation" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="labelLayerBackground" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLayerCornerRadius" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="labelLayerShadowOpacity" candidateClass="UILabel"/>

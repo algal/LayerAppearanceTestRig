@@ -38,4 +38,6 @@
 @property (weak, nonatomic) IBOutlet UILabel * labelLayerCornerRadius;
 @property (weak, nonatomic) IBOutlet UILabel *labelLayerShouldRasterize;
 
+@property (weak, nonatomic) IBOutlet UITextView *labelDocumentation;
+
 @end

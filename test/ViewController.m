@@ -41,6 +41,10 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.labelDocumentation.text = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"README.md" ofType:nil]
+                                                           encoding:NSUTF8StringEncoding
+                                                              error:NULL];
   self.view.backgroundColor = [UIColor whiteColor];
   
   UIView * hostView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 200, 200)];
