@@ -142,6 +142,7 @@
   hostLayer.opaque = self.switchLayerOpaque.on;
   hostLayer.shadowRadius = 10.f;
   hostLayer.shadowOpacity = self.sliderShadowOpacity.value;
+  hostLayer.shouldRasterize = self.switchLayerShouldRasterize.on;
   hostLayer.shadowPath = self.switchShadowPath.on ?
   [[UIBezierPath bezierPathWithRoundedRect:hostLayer.bounds
                               cornerRadius:CORNER_RADIUS] CGPath] :  nil;
@@ -174,5 +175,6 @@
   self.labelLayerBackground.text = [NSString stringWithFormat:@"%p",self.theView.layer.backgroundColor];
   self.labelViewBackground.text =  [NSString stringWithFormat:@"%p",self.theView.backgroundColor.CGColor];
   self.labelLayerCornerRadius.text = [NSString stringWithFormat:@"%.1f",self.theView.layer.cornerRadius];
+  self.labelLayerShouldRasterize.text = self.theView.layer.shouldRasterize ? @"YES" : @"NO";
 }
 @end

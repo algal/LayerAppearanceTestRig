@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISlider * sliderShadowOpacity;
 @property (weak, nonatomic) IBOutlet UISwitch * switchShadowPath;
 @property (weak, nonatomic) IBOutlet UISlider * sliderLayerOpacity;
+@property (weak, nonatomic) IBOutlet UISwitch *switchLayerShouldRasterize;
 
 // handelers
 
@@ -34,5 +35,6 @@
 @property (weak, nonatomic) IBOutlet UILabel * labelViewBackground;
 @property (weak, nonatomic) IBOutlet UILabel * labelLayerShadowOpacity;
 @property (weak, nonatomic) IBOutlet UILabel * labelLayerCornerRadius;
+@property (weak, nonatomic) IBOutlet UILabel *labelLayerShouldRasterize;
 
 @end
