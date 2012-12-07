@@ -159,6 +159,23 @@
   [self updateLabels];
 }
 
+- (IBAction)handleClickAnimatePosition:(id)sender {
+  CGPoint const initialPosition = self.theView.center;
+  NSTimeInterval const duration = 4.0f;
+  
+  [UIView animateWithDuration:(duration/2)
+                   animations:^{
+    self.theView.center = CGPointMake(initialPosition.x, initialPosition.y + 100);
+  }
+                   completion:^(BOOL finished) {
+                     [UIView animateWithDuration:(duration/2)
+                                      animations:^{
+                                        self.theView.center = initialPosition;
+                                      }
+                                      completion:NULL];
+                   }];
+}
+
 -(void)updateLabels
 {
   self.labelViewOpaque.text = self.theView.opaque ? @"YES" : @"NO";

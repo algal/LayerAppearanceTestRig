@@ -21,10 +21,11 @@
 @property (weak, nonatomic) IBOutlet UISlider * sliderLayerOpacity;
 @property (weak, nonatomic) IBOutlet UISwitch *switchLayerShouldRasterize;
 
-// handelers
+// handlers
 
 - (IBAction)switchValueChanged:(id)sender;
 - (IBAction)handleClickSetNeedsDisplay:(id)sender;
+- (IBAction)handleClickAnimatePosition:(id)sender;
 
 // labels
 
