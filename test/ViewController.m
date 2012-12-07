@@ -114,7 +114,7 @@
                                      CGRectGetMaxY(hostLayer.bounds));
   circleLayer.path = [[UIBezierPath bezierPathWithRoundedRect:circleLayer.bounds
                                                  cornerRadius:circleLayer.bounds.size.width / 2.0] CGPath];
-  circleLayer.fillColor = [[UIColor redColor] CGColor];
+  circleLayer.fillColor = [[UIColor magentaColor] CGColor];
   [hostLayer addSublayer:circleLayer];
   
   // add a mask sublayer
@@ -139,7 +139,7 @@
   hostLayer.masksToBounds = self.switchMasksToBounds.on;
   hostLayer.cornerRadius =  CORNER_RADIUS;
   hostLayer.mask = self.switchMask.on ? ellipseLayer : nil;
-  hostLayer.opaque = self.switchOpaque.on;
+  hostLayer.opaque = self.switchLayerOpaque.on;
   hostLayer.shadowRadius = 10.f;
   hostLayer.shadowOpacity = self.sliderShadowOpacity.value;
   hostLayer.shadowPath = self.switchShadowPath.on ?

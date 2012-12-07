@@ -13,70 +13,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.masksToBounds " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CUd-YU-6Ty">
-                                <rect key="frame" x="402" y="112" width="173" height="21"/>
+                                <rect key="frame" x="412" y="112" width="173" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.cornerRadius" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JtX-3c-Wx1">
-                                <rect key="frame" x="373" y="147" width="201" height="21"/>
+                                <rect key="frame" x="383" y="147" width="201" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.mask == [small circle]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7eB-Gu-mgZ">
-                                <rect key="frame" x="371" y="182" width="205" height="21"/>
+                                <rect key="frame" x="381" y="182" width="205" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.opaque" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZJA-5U-zRp">
-                                <rect key="frame" x="477" y="217" width="99" height="21"/>
+                                <rect key="frame" x="487" y="217" width="99" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.shadowOpacity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sZJ-Cl-XYP">
-                                <rect key="frame" x="414" y="252" width="158" height="21"/>
+                                <rect key="frame" x="424" y="252" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.shadowPath == [rounded rect]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ckz-rf-exr">
-                                <rect key="frame" x="306" y="287" width="270" height="21"/>
+                                <rect key="frame" x="316" y="287" width="270" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Ze6-xc-xLg">
-                                <rect key="frame" x="596" y="109" width="79" height="27"/>
+                                <rect key="frame" x="606" y="109" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="D25-72-9tg"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="ZzP-O4-CHO">
-                                <rect key="frame" x="596" y="179" width="79" height="27"/>
+                                <rect key="frame" x="606" y="179" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="khy-oq-Co3"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="GxE-7n-FAY">
-                                <rect key="frame" x="596" y="214" width="79" height="27"/>
+                                <rect key="frame" x="606" y="214" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Ool-4C-y2E"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Q5e-bX-wbl">
-                                <rect key="frame" x="596" y="284" width="79" height="27"/>
+                                <rect key="frame" x="606" y="284" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="2ID-7A-BcP"/>
@@ -98,14 +98,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="view.opaque" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EJj-qD-JDf">
-                                <rect key="frame" x="843" y="217" width="96" height="21"/>
+                                <rect key="frame" x="843" y="388" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dYU-e1-t0a">
-                                <rect key="frame" x="746" y="217" width="42" height="21"/>
+                                <rect key="frame" x="746" y="388" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -125,29 +125,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VIEW.LAYER PROPERTIES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a3Y-g4-2m4">
-                                <rect key="frame" x="459" y="42" width="219" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VIEW.LAYER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a3Y-g4-2m4">
+                                <rect key="frame" x="480" y="42" width="113" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VIEW PROPERTIES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iYA-3I-gMt">
-                                <rect key="frame" x="746" y="42" width="158" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VIEW" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iYA-3I-gMt">
+                                <rect key="frame" x="844" y="42" width="158" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Property" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ehO-u3-5pk">
-                                <rect key="frame" x="507" y="76" width="65" height="21"/>
+                                <rect key="frame" x="517" y="76" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iA1-fO-79w">
-                                <rect key="frame" x="602" y="76" width="65" height="21"/>
+                                <rect key="frame" x="612" y="76" width="65" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -167,38 +167,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k0c-gK-pm3">
-                                <rect key="frame" x="20" y="387" width="784" height="378"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels values update automatically.
-
-view.layer has:
-- a background "color" image defined with +[UIColor colorWithImagePattern:]
-- a CAShapeLayer sublayer with red circle centred on the bottom-right
-- an (optional) mask layer with a small centered circle
-
-Notable:
-- layer.cornerRadius masks the layer's background (even when masksToBounds=NO)
-- layer.cornerRadius also masks the layer's contents (when masksToBounds=YES)
-- layer.masksToBounds=YES masks out any drop shadows, since they lie outside the bounds
-- layer.masksToBounds and view.clipsToBounds are equivalent
-- layer.opacity and view.alpha are equivalent
-- layer.backgroundColor and view.backgroundColor are equivalent
-- layer.opaque and view.opaque are NOT equivalent; layer.opaque is strange
-</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.opacity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7CH-W1-Dn0">
-                                <rect key="frame" x="480" y="324" width="96" height="21"/>
+                                <rect key="frame" x="490" y="324" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" id="eqb-8t-FNS">
-                                <rect key="frame" x="594" y="324" width="118" height="23"/>
+                                <rect key="frame" x="604" y="324" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="UKU-zc-Dry"/>
@@ -219,7 +196,7 @@ Notable:
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="layer.backgroundColor" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cTY-nb-F62">
-                                <rect key="frame" x="402" y="358" width="174" height="21"/>
+                                <rect key="frame" x="412" y="358" width="174" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -233,21 +210,21 @@ Notable:
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Ft-Q6-Lyh">
-                                <rect key="frame" x="745" y="358" width="100" height="21"/>
+                                <rect key="frame" x="745" y="358" width="82" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q5V-Zy-7QU">
-                                <rect key="frame" x="602" y="358" width="100" height="21"/>
+                                <rect key="frame" x="612" y="358" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="QxE-EV-HEC">
-                                <rect key="frame" x="594" y="251" width="118" height="23"/>
+                                <rect key="frame" x="604" y="251" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Phh-hm-nHo"/>
@@ -268,12 +245,35 @@ Notable:
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="40" id="k8a-F8-vic">
-                                <rect key="frame" x="594" y="147" width="118" height="23"/>
+                                <rect key="frame" x="604" y="147" width="118" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="2" eventType="valueChanged" id="Dmw-dy-Zdl"/>
                                 </connections>
                             </slider>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" id="ukT-yc-2qk">
+                                <rect key="frame" x="10" y="561" width="784" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This tool shows how a view.layer's properties affects the view's properties and appearance.  Set the view.layer's properties, call setNeedsDisplay, and see the results. Labels values update automatically.
+
+view.layer has:
+- a background "color" image defined with +[UIColor colorWithImagePattern:]
+- a CAShapeLayer sublayer with red circle centred on the bottom-right
+- an (optional) mask layer with a small centered circle
+
+Notable:
+- layer.cornerRadius masks the layer's background (even when masksToBounds=NO)
+- layer.cornerRadius also masks the layer's contents (when masksToBounds=YES)
+- layer.masksToBounds=YES masks out any drop shadows, since they lie outside the bounds
+- layer.masksToBounds and view.clipsToBounds are equivalent
+- layer.opacity and view.alpha are equivalent
+- layer.backgroundColor and view.backgroundColor are equivalent
+- layer.opaque and view.opaque are NOT equivalent; layer.opaque is strange
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -290,9 +290,9 @@ Notable:
                         <outlet property="sliderCornerRadius" destination="k8a-F8-vic" id="8S1-Vn-bah"/>
                         <outlet property="sliderLayerOpacity" destination="eqb-8t-FNS" id="Sre-dR-RX4"/>
                         <outlet property="sliderShadowOpacity" destination="QxE-EV-HEC" id="aVQ-d7-s0P"/>
+                        <outlet property="switchLayerOpaque" destination="GxE-7n-FAY" id="luP-Sq-z7s"/>
                         <outlet property="switchMask" destination="ZzP-O4-CHO" id="MD7-Zl-fMZ"/>
                         <outlet property="switchMasksToBounds" destination="Ze6-xc-xLg" id="iz8-bZ-VhU"/>
-                        <outlet property="switchOpaque" destination="GxE-7n-FAY" id="5SE-mK-C6Y"/>
                         <outlet property="switchShadowPath" destination="Q5e-bX-wbl" id="2XE-l3-nVt"/>
                     </connections>
                 </viewController>
@@ -316,9 +316,9 @@ Notable:
                 <relationship kind="outlet" name="sliderCornerRadius" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="sliderLayerOpacity" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="sliderShadowOpacity" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="switchLayerOpaque" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchMask" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchMasksToBounds" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="switchOpaque" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="switchShadowPath" candidateClass="UISwitch"/>
             </relationships>
         </class>
